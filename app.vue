@@ -20,6 +20,11 @@ body {
   font-family: 'JetBrains Mono', monospace;
 }
 
+
+.h-screen-65 {
+  min-height: 65vh;
+}
+
 .special-font {
   font-family: 'Comfortaa', cursive !important;
 

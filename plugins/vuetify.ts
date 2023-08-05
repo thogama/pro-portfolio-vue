@@ -6,6 +6,7 @@ const myCustomLightTheme: ThemeDefinition = {
     dark: true,
     colors: {
         primary: "#008000",
+        secondary:"#00B300"
     }
 }
 
