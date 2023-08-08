@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     'vuetify/lib/styles/main.sass',
     '@mdi/font/css/materialdesignicons.min.css',
   ],
-  modules: ['nuxt-icon', '@nuxtjs/i18n'],
+  modules: ['nuxt-icon', '@nuxtjs/i18n', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
   i18n: {
     langDir: "locales",
 
@@ -18,6 +18,5 @@ export default defineNuxtConfig({
       alwaysRedirect: true,
       fallbackLocale: "en"
     },
-    // strategy:"no_prefix"
   }
 })

@@ -1,17 +1,13 @@
 <template>
-    <VContainer>
+    <VRow style="min-height: 100vh">
+        <VContainer justify="center" class="h-screen-65 d-flex align-center justify-center special-font">
+            <v-expand-transition>
 
-        <VRow style="min-height: 100vh;">
+            </v-expand-transition>
 
 
-            <VCol sm="3" cols="6">
-                <v-expand-transition>
-
-                </v-expand-transition>
-            </VCol>
-        </VRow>
-
-    </VContainer>
+        </VContainer>
+    </VRow>
 </template>
 
 <script setup lang="ts">
@@ -23,7 +19,4 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.clipme {
-    background-image: url('http://localhost:3000/blob.svg');
-}
 </style>

@@ -1,82 +1,87 @@
 <template>
-    <div>
-
-        <VRow style="min-height: 100vh;">
-            <VContainer justify="center" class="h-screen-65 d-flex align-center justify-center special-font">
-                <v-expand-transition>
-
-                    <div v-if="trigger" class="text-primary text-h3 text-sm-h1 mx-sm-6 mx-6">
-                        {{ $t(phrases[currentphrase]) }}
-                    </div>
-                </v-expand-transition>
-
-
-            </VContainer>
-            <VContainer>
-                <VRow>
-
-
-                    <VCol style="text-align: justify;" class="px-6" cols="12" md="4">
-                        {{ $t("Senior Vue.js Developer, tackling challenges with elegant and innovative solutions. Explore more in this portfolio.") }}
-                    </VCol>
-
-                </VRow>
-            </VContainer>
-        </VRow>
-
-
-        <VRow align-content="center" style="min-height: 100vh;">
-            <VContainer>
-                <div class="px-3 py-5 ">
-                    <div class="special-font ps-1">
-
-                        {{ $t("Services") }}
-                    </div>
-                    <div class="text-h2 text-primary py-3">
-                        {{ $t("Highlights") }}
-                    </div>
+    <VRow style="min-height: 100vh;">
+        <VContainer justify="center" class="h-screen-65 d-flex align-center justify-center special-font">
+            <v-expand-transition>
+                <div v-if="trigger" class="text-primary text-h3 text-sm-h1 mx-sm-6 mx-6">
+                    {{ $t(phrases[currentphrase]) }}
                 </div>
-            </VContainer>
-            <VContainer>
-                <VRow justify="space-evenly">
-                    <VCol v-if="breakpoints.sm" v-for="item, index in items" cols="6" md="4">
-                        <v-fade-transition :style="{ transitionDelay: `${index * 0.1}s` }">
-                            <VCard rounded class="d-flex h-100 pa-2 ma-1">
-                                <VRow class="ma-2 ma-sm-4">
-                                    <VCol cols="12 pa-0">
-                                        <Icon class="text-primary" style="font-size: xxx-large;" :name="item.icon" />
-
-                                    </VCol>
-                                    <VCol class="text-h6 pa-1 mt-3" cols="12">
-
-                                        {{ $t(item.title) }}
-
-                                    </VCol>
-                                    <VCol class="d-none d-sm-flex special-font text-body-2 pa-1">
-
-                                        {{ $t(item.content) }}
-
-                                    </VCol>
-                                </VRow>
-
-                            </VCard>
-                        </v-fade-transition>
-                    </VCol>
-
-                </VRow>
+            </v-expand-transition>
 
 
-            </VContainer>
-        </VRow>
-    </div>
+        </VContainer>
+        <VContainer>
+            <VRow>
+                <VCol>
+
+
+                    <div :class="theme.dark ? 'text-black' : ''" variant="elevated" style="text-align: justify;"
+                        class="px-7">
+                        {{ $t("intro") }}
+                    </div>
+
+                </VCol>
+            </VRow>
+        </VContainer>
+    </VRow>
+
+
+    <VRow align-content="center">
+        <VContainer>
+            <div class="px-3 py-5 ">
+                <div :class="theme.dark ? 'text-black' : ''" class="special-font  ps-1 mx-3">
+
+                    {{ $t("Services") }}
+                </div>
+                <div class="text-h2 text-primary py-3 mx-3">
+                    {{ $t("Highlights") }}
+                </div>
+            </div>
+        </VContainer>
+        <VContainer class="mb-5 mb-md-8">
+            <VRow class="px-5" justify="space-evenly">
+                <VCol v-if="breakpoints.sm" v-for="item, index in items" cols="6" md="4">
+                    <v-fade-transition :style="{ transitionDelay: `${index * 0.1}s` }">
+                        <VCard rounded class="d-flex h-100 pa-2 ma-1">
+
+                            <VRow class="ma-2 ma-sm-4" justify="end">
+                                <VBtn variant="tonal" density="compact" icon>
+
+                                    <VIcon icon="mdi:mdi-plus" />
+                                </VBtn>
+                                <VCol cols="12 pa-0 d-flex justify-space-between align-center">
+
+                                    <Icon class="text-primary" style="font-size: xxx-large;" :name="item.icon" />
+
+                                </VCol>
+                                <VCol class="text-h6 pa-1 mt-3" cols="12">
+
+                                    {{ $t(item.title) }}
+
+                                </VCol>
+                                <VCol class="d-none d-sm-flex special-font text-body-2 pa-1">
+
+                                    {{ $t(item.content) }}
+
+                                </VCol>
+                            </VRow>
+
+                        </VCard>
+                    </v-fade-transition>
+                </VCol>
+
+            </VRow>
+
+
+        </VContainer>
+    </VRow>
 </template>
 
 <script setup lang="ts">
-import { useDisplay, useTheme } from 'vuetify/lib/framework.mjs';
+import { useDisplay } from 'vuetify/lib/framework.mjs';
+import { themeStore } from "@/stores/theme";
 
-let theme = useTheme()
 
-
+let theme = themeStore()
 let breakpoints = useDisplay()
 
 let items: { icon: string, title: string, content: string }[] = [
@@ -101,7 +106,7 @@ let items: { icon: string, title: string, content: string }[] = [
         content: "Quick adaptation to a variety of projects, precisely addressing the unique needs of each challenge as a freelancer on Upwork."
     },
     {
-        icon: "clarity:talk-bubbles-outline-badged",
+        icon: "ph:chats-circle-fill",
         title: "References",
         content: "Explore the references kindly shared by teammates or clients about my work method and approach in each project."
     },
@@ -135,8 +140,8 @@ onMounted(() => {
             }
 
             trigger.value = true
-        }, 500) 
-    }, 3500) 
+        }, 500)
+    }, 3500)
 })
 definePageMeta({
     layout: "default"

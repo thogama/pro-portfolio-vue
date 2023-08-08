@@ -9,6 +9,7 @@ const DarkTheme: ThemeDefinition = {
     colors: {
         primary: "#008000",
         secondary: "#00B300",
+        dark: "#000000"
     }
 }
 const LightTheme: ThemeDefinition = {
@@ -16,6 +17,7 @@ const LightTheme: ThemeDefinition = {
     colors: {
         primary: "#008000",
         secondary: "#00B300",
+        dark: "#121212"
     }
 }
 

@@ -1,6 +1,6 @@
 <template>
-  <NuxtLayout >
-    <NuxtPage  />
+  <NuxtLayout>
+    <NuxtPage />
   </NuxtLayout>
 </template>
 <script setup>
@@ -9,12 +9,10 @@
 <style lang="scss" >
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=JetBrains+Mono&display=swap');
 
-html {
-  overflow-y: auto;
-}
-
 body {
   font-family: 'JetBrains Mono', monospace;
+  overflow-x: clip;
+  overflow-y: clip;
 }
 
 

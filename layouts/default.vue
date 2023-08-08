@@ -1,8 +1,9 @@
 <template>
-    <VLayout :style="currentTheme ? 'background-image: url(noise2.png)' : 'background-image: url(noise.png)'"
-        style="min-height: 100vh;background-repeat: repeat;">
-        <VThemeProvider :theme="currentTheme ? 'LightTheme' : 'DarkTheme'">
-            <VAppBar scroll-behavior="hide" :elevation="2">
+    <VThemeProvider :theme="currentTheme.dark ? 'LightTheme' : 'DarkTheme'">
+        <VLayout full-height
+            :style="currentTheme.dark ? 'background-image: url(noise2.png)' : 'background-image: url(noise.png)'"
+            style="background-repeat: repeat;">
+            <VAppBar :image="currentTheme.dark ? '/noise2.png' : '/noise.png'" scroll-behavior="fade-image" :elevation="2">
                 <template v-slot:title>
                     <div class="special-font text-primary">
                         alan
@@ -27,10 +28,11 @@
                             </VTab>
                         </NuxtLink>
 
+
                     </VTabs>
                     <VBtn @click="changeTheme" icon label="Switch" inset>
                         <template v-slot:default>
-                            <VIcon v-if="theme.current.value.dark" size="large" icon="mdi:mdi-white-balance-sunny" />
+                            <VIcon v-if="!currentTheme.dark" size="large" icon="mdi:mdi-white-balance-sunny" />
                             <VIcon v-else size="large" icon="mdi:mdi-moon-waxing-crescent" />
 
                         </template>
@@ -40,22 +42,22 @@
             <VMain>
 
 
-                <slot />
+                <slot/>
             </VMain>
 
-        </VThemeProvider>
-    </VLayout>
+
+        </VLayout>
+    </VThemeProvider>
 </template>
 
 <script setup lang="ts">
-import { useTheme } from 'vuetify/lib/framework.mjs';
+import { themeStore } from '@/stores/theme';
 
-let theme = useTheme()
 
-let currentTheme = ref(theme.current.value.dark)
+let currentTheme = themeStore()
 
 function changeTheme() {
-    currentTheme.value = !currentTheme.value
+    currentTheme.change()
 }
 
 let route = useRouter().currentRoute.value.name?.toString().includes("about")
