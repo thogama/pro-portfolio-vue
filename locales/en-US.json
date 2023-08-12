@@ -19,9 +19,18 @@
     "Explore the references kindly shared by teammates or clients about my work method and approach in each project.": "Explore the references kindly shared by teammates or clients about my work method and approach in each project.",
     "Projects": "Projects",
     "Discover the projects I've participated in, each with its own complexities, distinct objectives, and in collaboration with various talented teams.": "Discover the projects I've participated in, each with its own complexities, distinct objectives, and in collaboration with various talented teams.",
-    "I'm":"I'm",
-    "A fullstack developer":"A fullstack developer",
-    "and a":"and a",
-    "lover":"lover"
-
+    "I'm": "I'm",
+    "A fullstack developer": "A fullstack developer",
+    "and a": "and a",
+    "lover": "lover",
+    "Who": "Who I am",
+    "Id": "At glance",
+    "FAQ": "FAQs",
+    "Answer": "Answer",
+    "name": "Full name",
+    "old": "How old are you?",
+    "where": "Where are you based?",
+    "languages": "Which languages do you speak?",
+    "exp": "How many years in the dev field?",
+    "time": "Weekly hours available?"
 }
