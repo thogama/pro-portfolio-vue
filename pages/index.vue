@@ -1,6 +1,6 @@
 <template>
-    <VRow style="min-height: 100vh;">
-        <VContainer justify="center" class="h-screen-65 d-flex align-center justify-center special-font">
+    <VRow class="h-screen">
+        <VContainer class="h-screen-65 d-flex align-center justify-center special-font">
             <v-expand-transition>
                 <div v-if="trigger" class="text-primary text-h3 text-sm-h1 mx-sm-6 mx-6">
                     {{ $t(phrases[currentphrase]) }}

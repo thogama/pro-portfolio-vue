@@ -39,10 +39,11 @@
                     </VBtn>
                 </template>
             </VAppBar>
+
             <VMain>
 
 
-                <slot/>
+                <slot />
             </VMain>
 
 

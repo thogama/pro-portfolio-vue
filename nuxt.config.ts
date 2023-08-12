@@ -18,5 +18,6 @@ export default defineNuxtConfig({
       alwaysRedirect: true,
       fallbackLocale: "en"
     },
+    strategy:"no_prefix"
   }
 })
