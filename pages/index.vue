@@ -95,13 +95,13 @@ let items: { icon: string, title: string, content: string, to: string }[] = [
         icon: "ph:globe-light",
         title: "Web",
         content: "Expertise in a wide range of technologies, such as Nuxt, Next, Angular, Bootstrap, Ant-Design, and Vuetify, whether used individually or in combination, with a focus on web development.",
-        to: ""
+        to: "/about/#stack"
     },
     {
         icon: "mdi:server-outline",
         title: "Back-End",
         content: "Skilled in TypeScript, PHP, Node, and Python for robust and efficient back-end solutions, positioning me as a Mid FullStack developer.",
-        to: ""
+        to: "/about/#stack"
     },
     {
         icon: "cib:upwork",

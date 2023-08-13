@@ -4,7 +4,9 @@
   </NuxtLayout>
 </template>
 <script setup>
-
+useHead({
+  title:"Alan J. O. Gama",
+})
 </script>
 <style lang="scss" >
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=JetBrains+Mono&display=swap');
