@@ -1,7 +1,7 @@
 <template>
     <VThemeProvider :theme="currentTheme.dark ? 'LightTheme' : 'DarkTheme'">
         <VLayout full-height
-            :style="currentTheme.dark ? 'background-image: url(noise2.png)' : 'background-image: url(noise.png)'"
+            :style="currentTheme.dark ? 'background-image: url(/noise2.png)' : 'background-image: url(/noise.png)'"
             style="background-repeat: repeat;">
             <VAppBar :image="currentTheme.dark ? '/noise2.png' : '/noise.png'" scroll-behavior="fade-image" :elevation="2">
                 <template v-slot:title>

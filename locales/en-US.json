@@ -32,5 +32,7 @@
     "where": "Where are you based?",
     "languages": "Which languages do you speak?",
     "exp": "How many years in the dev field?",
-    "time": "Weekly hours available?"
+    "time": "Weekly hours available?",
+    "Expertise":"Tech Expertise",
+    "Stack": "Stacks"
 }

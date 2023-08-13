@@ -9,15 +9,15 @@
                     <VCol cols="6">
 
 
-                        <VCard variant="text" class="d-flex justify-end">
+                        <VCard style="transform: scale(-1,1);" variant="text" class="d-flex justify-end">
 
-                            <VImg style="max-width: 39rem;transform: scale(-1,1);max-height: 65vh;" src="/photo2.png" />
-
+                            <VImg placeholder="a beatiful boy" style="max-width: 39rem;max-height: 65vh"
+                                src="/photo2.png" />
                         </VCard>
 
                     </VCol>
                     <VDivider v-if="screen.mdAndUp" vertical />
-                    <VCol class="pt-8 text-h5 special-font text-center d-flex flex-column justify-center align-center">
+                    <VCol class="mx-md-10 pt-8 text-h5 special-font text-center d-flex flex-column justify-center align-center">
                         {{ $t("I'm") }}
                         <span class="text-primary text-h1 special-font mx-3">
                             Alan
@@ -46,7 +46,7 @@
 
     <VRow class="h-screen">
         <VContainer class="align-self-center">
-            <div class="px-3 py-5 ">
+            <div class="px-3 pt-10">
                 <div :class="theme.dark ? 'text-black' : ''" class="special-font  ps-1 mx-3">
 
                     {{ $t("Who") }}
@@ -57,13 +57,13 @@
             </div>
         </VContainer>
         <VContainer>
-            <VTable class="border rounded" fixed-header density="comfortable" hover>
+            <VTable class="border rounded mx-3" fixed-header density="comfortable" hover>
                 <thead>
                     <tr>
                         <th class="text-left text-h5">
                             {{ $t("FAQ") }}
                         </th>
-                        <th class="text-left text-h5">
+                        <th class="text-left text-h5 pa-2">
                             {{ $t("Answer") }}
                         </th>
                     </tr>
@@ -71,11 +71,11 @@
                 <tbody>
                     <tr v-for="item in faqs">
                         <td>{{ $t(item.question) }}</td>
-                        <td class="pa-3" v-if="item.question != 'languages'">{{ item.answer }}</td>
+                        <td class="pa-2" v-if="item.question != 'languages'">{{ item.answer }}</td>
                         <td v-else>
-                            <VRow align="center">
+                            <VRow justify="space-between" align="center">
 
-                                <VCol xs="12" md="10">
+                                <VCol xs="11" md="9">
 
                                     <VProgressLinear color="primary" height="5" model-value="100" />
                                 </VCol>
@@ -88,7 +88,7 @@
                             </VRow>
                             <VRow class="mt-0" align="center">
 
-                                <VCol xs="12" md="10">
+                                <VCol xs="11" md="9">
 
                                     <VProgressLinear color="light-blue-darken-1" height="5" model-value="70" />
                                 </VCol>
@@ -106,6 +106,19 @@
         </VContainer>
 
 
+    </VRow>
+    <VRow>
+        <VContainer>
+            <div class="px-3 py-5 ">
+                <div :class="theme.dark ? 'text-black' : ''" class="special-font  ps-1 mx-3">
+                    {{ $t("Expertise") }}
+
+                </div>
+                <div class="text-h2 text-primary py-3 mx-3">
+                    {{ $t("Stack") }}
+                </div>
+            </div>
+        </VContainer>
     </VRow>
 </template>
 <script setup lang="ts">

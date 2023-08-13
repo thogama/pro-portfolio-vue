@@ -22,15 +22,17 @@
     "I'm": "",
     "A fullstack developer": "Desenvolvedor fullstack",
     "and a": "e um",
-    "lover": "apaixonado",
+    "lover": "fan",
     "Who": "Quem Sou Eu",
     "Id": "Pessoal",
     "FAQ": "Perguntas Frequentes",
     "Answer": "Resposta",
-    "name": "Nome completo",
+    "name": "Nome completo?",
     "old": "Quantos anos você têm?",
     "where": "Onde você vive?",
     "languages": "Que linguas você fala?",
     "exp": "Quantos anos de experiência?",
-    "time": "Horas disponíveis semanalmente?"
+    "time": "Horas disponíveis na semana?",
+    "Expertise": "Competências Tecnológicas",
+    "Stack": "Tecnologias"
 }

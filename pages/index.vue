@@ -46,7 +46,7 @@
                             <VRow class="ma-2 ma-sm-4" justify="end">
                                 <VBtn variant="tonal" density="compact" icon>
 
-                                    <VIcon icon="mdi:mdi-plus" />
+                                    <VBtn :href="item.to"  density="compact" icon="mdi:mdi-plus" />
                                 </VBtn>
                                 <VCol cols="12 pa-0 d-flex justify-space-between align-center">
 
@@ -84,36 +84,42 @@ import { themeStore } from "@/stores/theme";
 let theme = themeStore()
 let breakpoints = useDisplay()
 
-let items: { icon: string, title: string, content: string }[] = [
+let items: { icon: string, title: string, content: string, to: string }[] = [
     {
         icon: "mingcute:git-merge-line",
         title: "Git Flow",
-        content: "As a developer, Git is a cornerstone of my work, enabling me to manage code efficiently and foster productive collaborations on GitHub."
+        content: "As a developer, Git is a cornerstone of my work, enabling me to manage code efficiently and foster productive collaborations on GitHub.",
+        to: "https://github.com/thogama"
     },
     {
         icon: "ph:globe-light",
         title: "Web",
-        content: "Expertise in a wide range of technologies, such as Nuxt, Next, Angular, Bootstrap, Ant-Design, and Vuetify, whether used individually or in combination, with a focus on web development."
+        content: "Expertise in a wide range of technologies, such as Nuxt, Next, Angular, Bootstrap, Ant-Design, and Vuetify, whether used individually or in combination, with a focus on web development.",
+        to: ""
     },
     {
         icon: "mdi:server-outline",
         title: "Back-End",
-        content: "Skilled in TypeScript, PHP, Node, and Python for robust and efficient back-end solutions, positioning me as a Mid FullStack developer."
+        content: "Skilled in TypeScript, PHP, Node, and Python for robust and efficient back-end solutions, positioning me as a Mid FullStack developer.",
+        to: ""
     },
     {
         icon: "cib:upwork",
         title: "Freelancing",
-        content: "Quick adaptation to a variety of projects, precisely addressing the unique needs of each challenge as a freelancer on Upwork."
+        content: "Quick adaptation to a variety of projects, precisely addressing the unique needs of each challenge as a freelancer on Upwork.",
+        to: "https://www.upwork.com/freelancers/~01c65b24230c0622b6"
     },
     {
         icon: "ph:chats-circle-fill",
         title: "References",
-        content: "Explore the references kindly shared by teammates or clients about my work method and approach in each project."
+        content: "Explore the references kindly shared by teammates or clients about my work method and approach in each project.",
+        to: "",
     },
     {
         icon: "mdi:projector-screen-outline",
         title: "Projects",
-        content: "Discover the projects I've participated in, each with its own complexities, distinct objectives, and in collaboration with various talented teams."
+        content: "Discover the projects I've participated in, each with its own complexities, distinct objectives, and in collaboration with various talented teams.",
+        to: ""
     }
 ]
 
