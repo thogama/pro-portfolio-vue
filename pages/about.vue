@@ -17,7 +17,8 @@
 
                     </VCol>
                     <VDivider v-if="screen.mdAndUp" vertical />
-                    <VCol class="mx-md-10 pt-8 text-h5 special-font text-center d-flex flex-column justify-center align-center">
+                    <VCol
+                        class="mx-md-10 pt-8 text-h5 special-font text-center d-flex flex-column justify-center align-center">
                         {{ $t("I'm") }}
                         <span class="text-primary text-h1 special-font mx-3">
                             Alan
@@ -44,7 +45,7 @@
 
     </VRow>
 
-    <VRow class="h-screen">
+    <VRow  justify="center" >
         <VContainer class="align-self-center">
             <div class="px-3 pt-10">
                 <div :class="theme.dark ? 'text-black' : ''" class="special-font  ps-1 mx-3">
@@ -56,70 +57,65 @@
                 </div>
             </div>
         </VContainer>
-        <VContainer>
-            <VTable class="border rounded mx-3" fixed-header density="comfortable" hover>
-                <thead>
-                    <tr>
-                        <th class="text-left text-h5">
-                            {{ $t("FAQ") }}
-                        </th>
-                        <th class="text-left text-h5 pa-2">
-                            {{ $t("Answer") }}
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="item in faqs">
-                        <td>{{ $t(item.question) }}</td>
-                        <td class="pa-2" v-if="item.question != 'languages'">{{ item.answer }}</td>
-                        <td v-else>
-                            <VRow justify="space-between" align="center">
+        <VContainer class="mx-6" >
+            <VRow>
+                <VCol cols="12">
 
-                                <VCol xs="11" md="9">
 
-                                    <VProgressLinear color="primary" height="5" model-value="100" />
-                                </VCol>
-                                <VCol class="d-flex justify-center align-center">
+                    <VTable density="comfortable" class="border rounded"  hover>
+                        <thead>
+                            <tr>
+                                <th class="text-left text-h5">
+                                    {{ $t("FAQ") }}
+                                </th>
+                                <th class="text-left text-h5 pa-2">
+                                    {{ $t("Answer") }}
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in faqs">
+                                <td>{{ $t(item.question) }}</td>
+                                <td class="pa-2" v-if="item.question != 'languages'">{{ item.answer }}</td>
+                                <td class="" v-else>
+                                    <VRow justify="space-between" align="center">
 
-                                    <Icon size="1.5rem" name="twemoji:flag-brazil" />
+                                        <VCol xs="11" md="9">
 
-                                </VCol>
+                                            <VProgressLinear color="primary" height="8" model-value="100" />
+                                        </VCol>
+                                        <VCol class="d-flex justify-center align-center">
 
-                            </VRow>
-                            <VRow class="mt-0" align="center">
+                                            <Icon size="1.5rem" name="twemoji:flag-brazil" />
 
-                                <VCol xs="11" md="9">
+                                        </VCol>
 
-                                    <VProgressLinear color="light-blue-darken-1" height="5" model-value="70" />
-                                </VCol>
-                                <VCol class="d-flex justify-center">
+                                    </VRow>
+                                    <VRow class="mt-0" align="center">
 
-                                    <Icon size="1.5rem" name="twemoji:flag-for-flag-united-states" />
+                                        <VCol xs="11" md="9">
 
-                                </VCol>
+                                            <VProgressLinear color="light-blue-darken-1" height="8" model-value="70" />
+                                        </VCol>
+                                        <VCol class="d-flex justify-center">
 
-                            </VRow>
-                        </td>
-                    </tr>
-                </tbody>
-            </VTable>
+                                            <Icon size="1.5rem" name="twemoji:flag-for-flag-united-states" />
+
+                                        </VCol>
+
+                                    </VRow>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </VTable>
+                </VCol>
+            </VRow>
         </VContainer>
 
 
     </VRow>
-    <VRow>
-        <VContainer>
-            <div class="px-3 py-5 ">
-                <div :class="theme.dark ? 'text-black' : ''" class="special-font  ps-1 mx-3">
-                    {{ $t("Expertise") }}
-
-                </div>
-                <div class="text-h2 text-primary py-3 mx-3">
-                    {{ $t("Stack") }}
-                </div>
-            </div>
-        </VContainer>
-    </VRow>
+    <Stacks/>
+   
 </template>
 <script setup lang="ts">
 import { themeStore } from '@/stores/theme';
