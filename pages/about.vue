@@ -11,7 +11,7 @@
 
                         <VCard style="transform: scale(-1,1);" variant="text" class="d-flex justify-end">
 
-                            <VImg placeholder="a beatiful boy" style="max-width: 39rem;max-height: 65vh"
+                            <VImg style="max-width: 39rem;max-height: 65vh"
                                 src="/photo2.png" />
                         </VCard>
 

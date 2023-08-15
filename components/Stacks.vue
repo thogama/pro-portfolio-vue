@@ -29,7 +29,6 @@
                                 </VRow>
                             </VCardTitle>
                             <VRow class="pa-3">
-                                <VDivider class="mx-3" />
                                 <VCol class="text-center pa-3" cols="4" v-for="front in frontend">
                                     <Icon v-if="screen.mdAndUp" class="text-h3 pa-1" :name="front" />
                                     <Icon v-else class="text-h5" :name="front" />
@@ -50,8 +49,6 @@
                                     </div>
                                 </VRow>
                             </VCardTitle>
-                            <VDivider class="mx-3" />
-
                             <VRow class="pa-3">
 
                                 <VCol class="text-center pa-3" cols="4" v-for="back in backend">
