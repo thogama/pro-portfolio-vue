@@ -17,7 +17,23 @@
                     <div :class="theme.dark ? 'text-black' : ''" variant="elevated" style="text-align: justify;"
                         class="px-7">
                         {{ $t("intro") }}
+
                     </div>
+                    <VMenu>
+                        <template v-slot:activator="{ props }">
+                            <VBtn v-bind="props" class="ma-7" color="primary" prepend-icon="mdi:mdi-file">
+                                Curriculum
+                            </VBtn>
+                        </template>
+                        <VList>
+                            <VListItem :value="item" v-for="item in ['pt-BR', 'en-US']">
+                                <VBtn :href="'/AlanGamaCV' + item + '.pdf'" width="100%" variant="plain">
+
+                                    {{ item }}
+                                </VBtn>
+                            </VListItem>
+                        </VList>
+                    </VMenu>
 
                 </VCol>
             </VRow>
@@ -39,14 +55,14 @@
         </VContainer>
         <VContainer class="mb-5 mb-md-8">
             <VRow class="px-5" justify="space-evenly">
-                <VCol v-for="item, index in items" cols="6" md="4">
+                <VCol v-for=" item, index  in  items " cols="6" md="4">
                     <v-fade-transition :style="{ transitionDelay: `${index * 0.1}s` }">
                         <VCard rounded class="d-flex h-100 pa-2 ma-1">
 
                             <VRow class="ma-2 ma-sm-4" justify="end">
                                 <VBtn variant="tonal" density="compact" icon>
 
-                                    <VBtn :href="item.to"  density="compact" icon="mdi:mdi-plus" />
+                                    <VBtn :href="item.to" density="compact" icon="mdi:mdi-plus" />
                                 </VBtn>
                                 <VCol cols="12 pa-0 d-flex justify-space-between align-center">
 
@@ -78,7 +94,6 @@
 
 <script setup lang="ts">
 import { themeStore } from "@/stores/theme";
-
 
 let theme = themeStore()
 let items: { icon: string, title: string, content: string, to: string }[] = [
