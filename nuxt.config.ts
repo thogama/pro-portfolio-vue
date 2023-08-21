@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       alwaysRedirect: true,
       fallbackLocale: "en"
     },
-    strategy: "no_prefix",
+    // strategy: "no_prefix",
   },
   nitro:{
     preset:"firebase"

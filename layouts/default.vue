@@ -7,7 +7,6 @@
                 <template v-slot:title>
                     <div class="special-font text-primary">
                         alan
-
                     </div>
                 </template>
                 <template v-slot:append>
@@ -28,18 +27,19 @@
                             </VTab>
                         </NuxtLink>
 
+                        <NuxtLink :to="localePath('projects')">
+                            <VTab :value="2">
+                                <VSheet class="special-font">
+                                    {{ $t("Projects") }}
+                                </VSheet>
+                            </VTab>
+                        </NuxtLink>
 
                     </VTabs>
-                    <VBtn @click="changeTheme" icon label="Switch" inset>
-                        <template v-slot:default>
-                            <VIcon v-if="!currentTheme.dark" size="large" icon="mdi:mdi-white-balance-sunny" />
-                            <VIcon v-else size="large" icon="mdi:mdi-moon-waxing-crescent" />
 
-                        </template>
-                    </VBtn>
                 </template>
-            </VAppBar>
 
+            </VAppBar>
             <VMain>
 
 
@@ -57,12 +57,10 @@ import { themeStore } from '@/stores/theme';
 
 let currentTheme = themeStore()
 
-function changeTheme() {
-    currentTheme.change()
-}
+let isAbout = useRouter().currentRoute.value.name?.toString().includes("about")
+let isProjects = useRouter().currentRoute.value.name?.toString().includes("projects")
 
-let route = useRouter().currentRoute.value.name?.toString().includes("about")
-let tab = ref(route ? 1 : 0)
+let tab = ref(isAbout ? 1 : isProjects ? 2 : 0)
 const localePath = useLocalePath()
 
 

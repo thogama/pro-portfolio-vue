@@ -39,7 +39,7 @@
         </VContainer>
         <VContainer class="mb-5 mb-md-8">
             <VRow class="px-5" justify="space-evenly">
-                <VCol v-if="breakpoints.sm" v-for="item, index in items" cols="6" md="4">
+                <VCol v-for="item, index in items" cols="6" md="4">
                     <v-fade-transition :style="{ transitionDelay: `${index * 0.1}s` }">
                         <VCard rounded class="d-flex h-100 pa-2 ma-1">
 
@@ -77,13 +77,10 @@
 </template>
 
 <script setup lang="ts">
-import { useDisplay } from 'vuetify/lib/framework.mjs';
 import { themeStore } from "@/stores/theme";
 
 
 let theme = themeStore()
-let breakpoints = useDisplay()
-
 let items: { icon: string, title: string, content: string, to: string }[] = [
     {
         icon: "mingcute:git-merge-line",
@@ -119,7 +116,7 @@ let items: { icon: string, title: string, content: string, to: string }[] = [
         icon: "mdi:projector-screen-outline",
         title: "Projects",
         content: "Discover the projects I've participated in, each with its own complexities, distinct objectives, and in collaboration with various talented teams.",
-        to: ""
+        to: "/projects"
     }
 ]
 

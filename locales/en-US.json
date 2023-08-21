@@ -34,5 +34,11 @@
     "exp": "How many years in the dev field?",
     "time": "Weekly hours available?",
     "Expertise":"Tech Expertise",
-    "Stack": "Stacks"
+    "Stack": "Stacks",
+    "go":"Go",
+    "project1_title":"Ongoing Construction Map",
+    "project1_description":"In this project, I developed an interactive map that closely tracks ongoing construction projects in São Cristóvão, providing a clear view of the municipality's progress",
+    "project2_title":"Radiological Reports Platform",
+    "project2_description":"I work as a front-end senior developer at LEORAD, enhancing the efficiency and accuracy of medical diagnostics through voice recognition technology"
+
 }

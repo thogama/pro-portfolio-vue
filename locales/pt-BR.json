@@ -34,5 +34,10 @@
     "exp": "Quantos anos de experiência?",
     "time": "Horas disponíveis na semana?",
     "Expertise": "Competências Tecnológicas",
-    "Stack": "Tecnologias"
+    "Stack": "Tecnologias",
+    "go":"Acesse",
+    "project1_title":"Mapa de Obras em Andamento",
+    "project1_description":"Neste projeto, desenvolvi um mapa interativo que acompanha de perto os projetos de construção em andamento em São Cristóvão, proporcionando uma visão clara do progresso do município",
+    "project2_title":"Sênior Frontend na LEORAD",
+    "project2_description":"Atuo como desenvolvedor front-end sênior em uma Plataforma de Laudos Radiológicos, aprimorando a eficiência e precisão dos diagnósticos médicos por meio da tecnologia de reconhecimento de voz"
 }

@@ -1,7 +1,7 @@
 <template>
     <section id="stack">
 
-        <VRow class=" h-screen-65" justify="center">
+        <VRow class=" h-screen-65 mb-3" justify="center">
             <VContainer>
                 <div class="px-3 py-5 ">
                     <div :class="theme.dark ? 'text-black' : ''" class="special-font  ps-1 mx-3">
@@ -18,7 +18,7 @@
                     <VCol cols="6">
 
 
-                        <VCard :class="theme.dark ? 'text-black' : ''" variant="elevated" class="h-100">
+                        <VCard :class="theme.dark ? 'text-black' : ''" variant="elevated" class="h-100 pa-1">
                             <VCardTitle>
 
                                 <VRow class="ma-2 ma-sm-4">
@@ -39,7 +39,7 @@
 
                     </VCol>
                     <VCol cols="6">
-                        <VCard :class="theme.dark ? 'text-black' : ''" variant="elevated" class="h-100">
+                        <VCard :class="theme.dark ? 'text-black' : ''" variant="elevated" class="h-100 pa-1">
                             <VCardTitle>
 
                                 <VRow class="ma-2 ma-sm-4">
