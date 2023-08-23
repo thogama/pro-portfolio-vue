@@ -1,5 +1,5 @@
 <template>
-    <VRow class="h-screen">
+    <VRow style="min-height: 100vh;">
         <VContainer class="h-screen-65 d-flex align-center justify-center special-font">
             <v-expand-transition>
                 <div v-if="trigger" class="text-primary text-h3 text-sm-h1 mx-sm-6 mx-6">
@@ -19,31 +19,35 @@
                         {{ $t("intro") }}
 
                     </div>
-                    <VMenu>
-                        <template v-slot:activator="{ props }">
-                            <VBtn v-bind="props" class="ma-7" color="primary" prepend-icon="mdi:mdi-file">
-                                Curriculum
-                            </VBtn>
-                        </template>
-                        <VList>
-                            <VListItem :value="item" v-for="item in ['pt-BR', 'en-US']">
-                                <VBtn :href="'/AlanGamaCV' + item + '.pdf'" width="100%" variant="plain">
 
-                                    {{ item }}
-                                </VBtn>
-                            </VListItem>
-                        </VList>
-                    </VMenu>
 
                 </VCol>
+            </VRow>
+            <VRow class="mx-0">
+
+                <VMenu>
+                    <template v-slot:activator="{ props }">
+                        <VBtn v-bind="props" class="ma-7" color="primary" prepend-icon="mdi:mdi-file">
+                            Curriculum
+                        </VBtn>
+                    </template>
+                    <VList>
+                        <VListItem :value="item" v-for="item in ['pt-BR', 'en-US']">
+                            <VBtn :href="'/AlanGamaCV' + item + '.pdf'" width="100%" variant="plain">
+
+                                {{ item }}
+                            </VBtn>
+                        </VListItem>
+                    </VList>
+                </VMenu>
             </VRow>
         </VContainer>
     </VRow>
 
+    <VRow>
 
-    <VRow align-content="center">
         <VContainer>
-            <div class="px-3 py-5 ">
+            <div class="mx-3 my-5 ">
                 <div :class="theme.dark ? 'text-black' : ''" class="special-font  ps-1 mx-3">
 
                     {{ $t("Services") }}
@@ -53,6 +57,9 @@
                 </div>
             </div>
         </VContainer>
+    </VRow>
+    <VRow align-content="center">
+
         <VContainer class="mb-5 mb-md-8">
             <VRow class="px-5" justify="space-evenly">
                 <VCol v-for=" item, index  in  items " cols="6" md="4">

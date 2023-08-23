@@ -1,7 +1,7 @@
 <template>
-    <VContainer class="h-screen">
+    <VContainer style="min-height: 100vh;">
         <VRow>
-            <VCol v-for="item, index in list" sm="4" cols="12">
+            <VCol v-for="item, index in list" sm="6" cols="12">
 
                 <v-fade-transition class=" h-100" :style="{ transitionDelay: `${index * 0.1}s` }">
 
@@ -11,23 +11,23 @@
                         </VCardTitle>
                         <VCardText class="pb-0">
                             <VImg max-height="250px" min-height="250px" cover aspect-ratio="1/1" :src="item.image" />
-                          
+
                             <VExpansionPanels>
-                                <VExpansionPanel  class="my-3 border" >
+                                <VExpansionPanel class="my-3 border">
                                     <VExpansionPanelTitle class="text-primary special-font">
                                         {{ item.stack }}
-                                    </VExpansionPanelTitle> 
+                                    </VExpansionPanelTitle>
                                     <VExpansionPanelText>
                                         {{ $t(item.description) }}
                                     </VExpansionPanelText>
 
-                                </VExpansionPanel>  
+                                </VExpansionPanel>
                             </VExpansionPanels>
                         </VCardText>
                         <VCardActions class="ma-3 mt-0">
-                            <VSpacer/>
+                            <VSpacer />
                             <VBtn color="primary" variant="flat" append-icon="mdi:mdi-arrow-right">
-                              {{ $t("go") }}
+                                {{ $t("go") }}
                             </VBtn>
                         </VCardActions>
                     </VCard>

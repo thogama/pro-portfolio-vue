@@ -8,17 +8,16 @@ export default defineNuxtConfig({
   modules: ['nuxt-icon', '@nuxtjs/i18n', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
   i18n: {
     langDir: "locales",
-
+    defaultLocale:"en",
     locales: [
       { code: 'en', iso: 'en-US', file: 'en-US' },
       { code: 'pt', iso: 'pt-BR', file: 'pt-BR' },
     ],
     lazy: true,
     detectBrowserLanguage: {
-      alwaysRedirect: true,
-      fallbackLocale: "en"
+      alwaysRedirect: true,      
     },
-    strategy: "no_prefix",
+    strategy:"prefix_except_default"
   },
   nitro:{
     preset:"firebase"

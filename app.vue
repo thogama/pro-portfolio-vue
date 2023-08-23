@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <VBtn :style="screen.mdAndUp?'right: 2%':'right:1%'" density="comfortable" style=";bottom: 5%;z-index: 1;" position="fixed"
+    <VBtn :style="screen.mdAndUp?'right: 2%':'right:2%'" density="comfortable" style=";top: 11%;z-index: 1;" position="fixed"
       @click="changeTheme" icon label="Switch" inset>
       <template v-slot:default>
         <VIcon v-if="!currentTheme.dark" size="small" icon="mdi:mdi-white-balance-sunny" />

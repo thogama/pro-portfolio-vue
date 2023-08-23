@@ -62,7 +62,7 @@
                 <VCol cols="12">
 
 
-                    <VTable density="comfortable" class="border rounded"  hover>
+                    <VTable density="comfortable" class="border rounded mx-md-4"  hover>
                         <thead>
                             <tr>
                                 <th class="text-left text-h5">
